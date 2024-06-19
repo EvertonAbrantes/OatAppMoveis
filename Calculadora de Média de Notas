@@ -1,0 +1,20 @@
+void main() {
+  // Defina o array de notas (valores mockados)
+  List<double> notas = [7.5, 9.0, 6.8, 8.2];
+
+  // Calcula a média ponderada com pesos 2, 3 e 5
+  double somaNotas = 0;
+  double somaPesos = 0;
+  for (int i = 0; i < notas.length; i++) {
+    somaNotas += notas[i] * (i == 0 ? 2 : i == 1 ? 3 : 5);
+    somaPesos += (i == 0 ? 2 : i == 1 ? 3 : 5);
+  }
+  double media = somaNotas / somaPesos;
+
+  // Verifica se o aluno está aprovado ou reprovado
+  if (media >= 6.0) {
+    print('Média: ${media.toStringAsFixed(2)} - Aprovado!');
+  } else {
+    print('Média: ${media.toStringAsFixed(2)} - Reprovado.');
+  }
+}

@@ -1,0 +1,9 @@
+void main() {
+  double fahrenheit = 68; // Temperatura em Fahrenheit
+  double celsius = (fahrenheit - 32) / 1.8;
+  print('68°F em Celsius: ${celsius.toStringAsFixed(2)}°C');
+
+  double celsius2 = 20; // Temperatura em Celsius
+  double fahrenheit2 = (celsius2 * 1.8) + 32;
+  print('20°C em Fahrenheit: ${fahrenheit2.toStringAsFixed(2)}°F');
+}

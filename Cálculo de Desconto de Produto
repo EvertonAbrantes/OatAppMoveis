@@ -1,8 +1,12 @@
-void main() {
-  double valorOriginal = 120.0; // Preço original do produto (R$)
-  double porcentagemDesconto = 15.0; // Porcentagem de desconto
+import 'dart:io';
 
-  // Cálculo do desconto em Reais
+void main() {
+  stdout.write('Digite o valor original do produto (R\$): ');
+  double valorOriginal = double.parse(stdin.readLineSync()!);
+
+  stdout.write('Digite a porcentagem de desconto: ');
+  double porcentagemDesconto = double.parse(stdin.readLineSync()!);
+
   double descontoReais = (valorOriginal * porcentagemDesconto) / 100;
   double precoFinal = valorOriginal - descontoReais;
 
@@ -10,7 +14,6 @@ void main() {
   print('Desconto: R\$ ${descontoReais.toStringAsFixed(2)}');
   print('Preço final com desconto: R\$ ${precoFinal.toStringAsFixed(2)}');
 
-  // Cálculo da porcentagem de desconto
   double valorFinalComDesconto = precoFinal;
   double porcentagemDescontoAplicada =
       ((valorOriginal - valorFinalComDesconto) / valorOriginal) * 100;

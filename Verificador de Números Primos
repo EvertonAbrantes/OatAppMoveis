@@ -1,5 +1,8 @@
+import 'dart:io';
+
 void main() {
-  int numero = 29; // Número a ser verificado (pode ser substituído)
+  stdout.write('Digite um número inteiro: ');
+  int numero = int.parse(stdin.readLineSync()!);
 
   bool ehPrimo = testarPrimo(numero);
   if (ehPrimo) {

@@ -1,0 +1,28 @@
+void main() {
+  int numero = 29; // Número a ser verificado (pode ser substituído)
+
+  bool ehPrimo = testarPrimo(numero);
+  if (ehPrimo) {
+    print('$numero é um número primo.');
+  } else {
+    print('$numero não é um número primo. Divisores:');
+    listarDivisores(numero);
+  }
+}
+
+bool testarPrimo(int numero) {
+  for (int i = 2; i <= numero / 2; i++) {
+    if (numero % i == 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+void listarDivisores(int numero) {
+  for (int i = 2; i <= numero / 2; i++) {
+    if (numero % i == 0) {
+      print(i);
+    }
+  }
+}
